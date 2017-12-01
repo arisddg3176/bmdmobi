@@ -1,0 +1,56 @@
+<div layout="row" ng-controller="ruangController" ng-cloak>
+    <div flex="10"></div>
+ 
+    <div flex="80" class='m-20px-0'>
+ 
+        <!-- page title & 'create product' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">Daftar Ruang</h3>
+                </div>
+ 
+                <!-- 'create' product button will be here -->
+				<!-- button for creating product -->
+				<md-button class="md-raised" ng-click="showCreateRuangForm()">Tambah</md-button>
+            </div>
+        </md-toolbar>
+ 
+        <!-- 'search' bar will be here -->
+		<!-- used for searching products in api -->
+		<md-input-container class="md-block m-b-0px">
+			<form ng-submit="searchRuang()">
+				<label>Cari Barang...</label>
+				<input ng-model="ruang_search_keywords">
+			</form>
+		</md-input-container>
+ 
+        <md-content flex>
+            <!-- show product record list -->
+            <md-list ng-init="readRuang()">
+                <md-list-item class="md-3-line" ng-repeat="r in ruang">
+ 
+                    <!-- product information -->
+                    <div class="md-list-item-text">
+                        <h3>{{r.nama}}</h3>
+                        <h4>{{r.gedung}}</h4>
+                    </div>
+ 
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <!-- 'read one' button will be here -->
+						<md-button class="md-raised md-info" ng-click="readOneRuang(r.id)">Read One</md-button>
+                        <!-- 'edit' button will be here -->
+						<md-button class="md-raised md-primary" ng-click="showUpdateRuangForm(r.id)">Edit</md-button>
+                        <!-- 'delete' button will be here -->
+						<md-button class="md-raised md-danger" ng-click="confirmDeleteRuang($event, r.id)">Delete</md-button>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+ 
+    <div flex="10"></div>
+</div> <!-- end row -->

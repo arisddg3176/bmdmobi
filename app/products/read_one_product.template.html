@@ -1,0 +1,63 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Read One KIR</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- display product information -->
+                <md-input-container class="md-block">
+                    <label>Kode Barang</label>
+                    <input ng-model="bkode" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Jenis Barang</label>
+                    <input ng-model="bjenis" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Deskripsi</label>
+                    <input ng-model="deskripsi" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Jumlah</label>
+                    <input ng-model="jumlah" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Sumber</label>
+                    <input ng-model="sumber" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Tahun</label>
+                    <input ng-model="tahun" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Kondisi</label>
+                    <input ng-model="kondisi" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Ruangan</label>
+                    <input ng-model="nama_ruang" disabled>
+                </md-input-container>
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <!-- button to close the dialog box -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

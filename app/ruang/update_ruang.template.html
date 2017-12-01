@@ -1,0 +1,44 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Update Ruang</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- dialog box input fields with editable product information -->
+                <md-input-container class="md-block">
+                    <label>Nama Ruang</label>
+                    <input ng-model="nama">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Gedung</label>
+                    <input ng-model="gedung">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Panjang (m2)</label>
+                    <input ng-model="p">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Lebar (m2)</label>
+                    <input ng-model="l">
+                </md-input-container>
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <!-- dialog box buttons -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Batal</md-button>
+            <md-button ng-click="updateRuang()" class="md-primary">Perbarui</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

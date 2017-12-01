@@ -1,0 +1,48 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <!-- dialog box title -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Detail Ruang</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- display product information -->
+                <md-input-container class="md-block">
+                    <label>Nama Ruang</label>
+                    <input ng-model="nama" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Gedung</label>
+                    <input ng-model="gedung" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Panjang (m)</label>
+                    <input ng-model="p" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Lebar (m)</label>
+                    <input ng-model="l" disabled>
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Luas (m2)</label>
+                    <input ng-model="luas" disabled>
+                </md-input-container>
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <!-- button to close the dialog box -->
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Batal</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
